@@ -63,16 +63,16 @@
 
 |Шаг|Что делается|Инструмент|
 |-|-|-|
-|1|Поиск по названию (без ОПФ, с городом)|`search\\\\\\\_all.py`|
-|2|Уточняющий поиск по ИНН|`search\\\\\\\_all.py`|
-|3|Реквизиты/финансы/директор/госконтракты|`requisites\\\\\\\_parser.py` (API → HTML)|
-|4|Домены, DNS, TLS, поддомены, wayback|`domain\\\\\\\_probe.py --tld-alts`|
-|5|Официальный сайт (меню = карта URL)|`fetch\\\\\\\_url.py` / `recover\\\\\\\_page.py`|
-|6|Соцсети: VK, TenChat, Telegram|`vk\\\\\\\_group\\\\\\\_parser.py`, `tenchat\\\\\\\_parser.py`, `tgstat\\\\\\\_parser.py`|
-|7|Вакансии hh.ru|`hh\\\\\\\_vacancies.py`|
-|8|Файловая серия (xls/xlsx/pdf)|`search\\\\\\\_all.py` (обязательный шаг)|
-|9|Новости ≤3 лет, закупки ЕИС 223 + tochka|`search\\\\\\\_all.py`, `zakupki\\\\\\\_223\\\\\\\_parser.py`, `zakupki\\\\\\\_tochka\\\\\\\_parser.py`|
-|10|Рейтинг, MD-карточка, выгрузка в Б24|`bitrix\\\\\\\_sync.py`|
+|1|Поиск по названию (без ОПФ, с городом)|`search_all.py`|
+|2|Уточняющий поиск по ИНН|`search_all.py`|
+|3|Реквизиты/финансы/директор/госконтракты|`requisites_parser.py` (API → HTML)|
+|4|Домены, DNS, TLS, поддомены, wayback|`domain_probe.py --tld-alts`|
+|5|Официальный сайт (меню = карта URL)|`fetch_url.py` / `recover_page.py`|
+|6|Соцсети: VK, TenChat, Telegram|`vk_group_parser.py`, `tenchat_parser.py`, `tgstat_parser.py`|
+|7|Вакансии hh.ru|`hh_vacancies.py`|
+|8|Файловая серия (xls/xlsx/pdf)|`search_all.py` (обязательный шаг)|
+|9|Новости ≤3 лет, закупки ЕИС 223 + tochka|`search_all.py`, `zakupki_223_parser.py`, `zakupki_tochka_parser.py`|
+|10|Рейтинг, MD-карточка, выгрузка в Б24|`bitrix_sync.py`|
 
 Полное описание — в `skill/SKILL.md` (шаги 1-15, обязательные правила, обработка ошибок).
 
@@ -86,15 +86,15 @@
 
 
 
-* **Битрикс24** (коробка или облако): передача `company\\\\\\\_id` из бизнес-процесса — синк
+* **Битрикс24** (коробка или облако): передача `company_id` из бизнес-процесса — синк
 записывает поля, карточку в таймлайн (BBCode), галку «Есть данные разведки».
 * **Checko API** (тариф 100 запросов/день): карточка/финансы/госзакупки/арбитраж —
 без 429 и капчи; HTML-парсер остаётся автоматическим фолбэком.
-* **Google / Yandex**: альтернативные движки поиска (`search\\\\\\\_all.py` google|yandex) —
-включаются ключами `SERPAPI\\\\\\\_KEY` / `YANDEX\\\\\\\_USER`+`YANDEX\\\\\\\_KEY`.
+* **Google / Yandex**: альтернативные движки поиска (`search_all.py` google|yandex) —
+включаются ключами `SERPAPI_KEY` / `YANDEX_USER`+`YANDEX_KEY`.
 * **VK API**: сервисный токен (описание группы, посты) или пользовательский (поиск сотрудников).
-* **Браузерные методы (подключен по умолчанию)**: ЕИС-SPA, b2b-center, corpmsp — через headless Chromium (`cdp\\\\\\\_parse.py`).
-* **Wayback/archive.today/Jina (подключен по умолчанию)**: восстановление заблокированных страниц (`recover\\\\\\\_page.py`).
+* **Браузерные методы (подключен по умолчанию)**: ЕИС-SPA, b2b-center, corpmsp — через headless Chromium (`cdp_parse.py`).
+* **Wayback/archive.today/Jina (подключен по умолчанию)**: восстановление заблокированных страниц (`recover_page.py`).
 
 
 
