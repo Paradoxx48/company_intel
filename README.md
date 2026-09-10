@@ -133,12 +133,12 @@
 
 Нужна помощь в установке?
 
-sichkarenkomax@gmail.com
-https://vk.ru/sichkarenkomax
-https://tenchat.ru/sichkarenkomax
-https://www.linkedin.com/in/maxim-sichkarenko-b0258580/
-https://t.me/sichkarenkomax
-https://www.facebook.com/sichkarenkomax/
+* sichkarenkomax@gmail.com
+* https://vk.ru/sichkarenkomax
+* https://tenchat.ru/sichkarenkomax
+* https://www.linkedin.com/in/maxim-sichkarenko-b0258580/
+* https://t.me/sichkarenkomax
+* https://www.facebook.com/sichkarenkomax/
 
 ---
 by sichkarenkomax
